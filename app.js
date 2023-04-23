@@ -1,4 +1,6 @@
 const express = require('express');
+const path = require('path');
+const rootDir = require('./helper/path')
 
 const app = express();
 
@@ -11,7 +13,7 @@ app.use('/admin', adminRoutes)
 app.use(shopRouter)
 
 app.use((req, res, next) => {
-  res.status(404).send('<h1>Page not found</h1>')
+  res.status(404).sendFile(path.join(rootDir, 'views', '404error.html'))
 })
 
 app.listen(3000)
