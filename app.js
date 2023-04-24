@@ -7,6 +7,8 @@ const app = express();
 const shopRouter = require('./routes/shop')
 const adminRoutes = require('./routes/admin')
 
+app.use(express.static(path.join(__dirname, 'public')))
+
 app.use(express.urlencoded({extended: true}));
 
 app.use('/admin', adminRoutes)
