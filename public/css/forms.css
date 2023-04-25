@@ -1,0 +1,16 @@
+.form-control {
+  margin: 1rem 0;
+}
+
+.form-control label,
+.form-control input {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+
+.form-control input {
+  border : 1px solid rgb(232, 82, 82);
+  font: inherit;
+  border-radius: 6px;
+}
